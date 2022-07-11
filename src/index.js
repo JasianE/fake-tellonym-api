@@ -21,6 +21,6 @@ app.get('/', indexRouter)
 app.post('/post', indexRouter)
 app.get('/find', indexRouter)
 
-app.listen((3000 || process.env.PORT), () => {
+app.listen((process.env.PORT || 3000), () => {
     console.log('hi')
 })
