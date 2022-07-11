@@ -11,7 +11,7 @@ exports.add = function(req,res,next){
             console.log(err)
             return next(err)
         } else {
-            res.json('Yes')
+            res.send(200)
         }
     })
 }
