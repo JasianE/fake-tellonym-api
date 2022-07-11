@@ -9,7 +9,7 @@ const cors = require('cors')
 mongoose.connect('mongodb+srv://Esam:greendayrocks56@cluster0.4dghv.mongodb.net/tellonym?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
 
 const db = mongoose.connection
-const port = 3000
+const port = 3000 || process.env.PORT
 db.on('error', console.error.bind(console, 'MongoDB connection error'))
 
 app.set('views', path.join(__dirname, 'views'));
