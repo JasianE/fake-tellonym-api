@@ -1,10 +1,10 @@
 const Tell = require('../models/tell')
 
 exports.add = function(req,res,next){
-    console.log(req.body.message)
+    console.log(req.body)
 
     const tell = new Tell({
-        message: 'ho',
+        message: 'lsinte',
         date: new Date()
     }).save(err => {
         if(err){
