@@ -4,17 +4,7 @@ exports.add = function(req,res,next){
     console.log(req.body)
     console.log(req)
 
-    const tell = new Tell({
-        message: req.body.message,
-        date: new Date()
-    }).save(err => {
-        if(err){
-            //console.log(err)
-            return next(err)
-        } else {
-            res.send(200)
-        }
-    })
+    res.send(200)
 }
 
 exports.find = function(req,res,next){
