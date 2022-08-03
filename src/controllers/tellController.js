@@ -4,14 +4,14 @@ exports.add = function(req,res,next){
     console.log(req.body)
 
     const tell = new Tell({
-        message: 'lsinte',
+        message: req.body.message,
         date: new Date()
     }).save(err => {
         if(err){
             console.log(err)
             return next(err)
         } else {
-            res.send(200)
+            res.sendStatus(200)
         }
     })
 }
