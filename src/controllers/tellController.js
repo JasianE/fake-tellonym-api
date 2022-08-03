@@ -4,7 +4,7 @@ exports.add = function(req,res,next){
     console.log(req.body)
 
     const tell = new Tell({
-        message: req.body.message,
+        message: 'hello',
         date: new Date()
     }).save(err => {
         if(err){
@@ -14,6 +14,7 @@ exports.add = function(req,res,next){
             res.sendStatus(200)
         }
     })
+
 }
 
 exports.find = function(req,res,next){
