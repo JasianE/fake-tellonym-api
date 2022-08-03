@@ -4,7 +4,7 @@ exports.add = function(req,res,next){
     console.log(req.body)
 
     const tell = new Tell({
-        message: 'hello',
+        message: req.body.message,
         date: new Date()
     }).save(err => {
         if(err){
